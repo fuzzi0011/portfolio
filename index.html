@@ -21,7 +21,7 @@
     pointer-events: none; z-index: 9999; opacity: 0.4;
   }
 
-  /* NAV */
+  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -29,11 +29,11 @@
     backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
   }
   .nav-logo { font-family: var(--font-head); font-weight: 800; font-size: 1.1rem; color: var(--accent); letter-spacing: -0.02em; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
+  /* ── HERO ── */
   .hero {
     min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
     padding: 8rem 3rem 4rem; position: relative; overflow: hidden;
@@ -46,7 +46,7 @@
   .hero-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
   .hero-text { flex: 1; min-width: 280px; }
 
-  /* PHOTO RING */
+  /* Photo ring */
   .hero-photo-wrap { flex-shrink: 0; position: relative; width: 260px; height: 260px; }
   .hero-photo-ring {
     position: absolute; inset: -5px; border-radius: 50%;
@@ -57,7 +57,8 @@
   @keyframes spin { to { transform: rotate(360deg); } }
   .hero-photo {
     position: absolute; inset: 4px; border-radius: 50%;
-    object-fit: cover; object-position: top center; width: calc(100% - 8px); height: calc(100% - 8px);
+    object-fit: cover; object-position: top center;
+    width: calc(100% - 8px); height: calc(100% - 8px);
   }
   .hero-photo-placeholder {
     position: absolute; inset: 4px; border-radius: 50%;
@@ -76,22 +77,22 @@
   h1 span { color: var(--accent); }
   .hero-subtitle { font-size: clamp(0.9rem, 2vw, 1.1rem); color: var(--muted); max-width: 500px; margin-top: 1.5rem; line-height: 1.7; }
   .hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
-  .btn { padding: 0.75rem 1.8rem; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; border-radius: 4px; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+  .btn { padding: 0.75rem 1.8rem; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; border-radius: 4px; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
   .btn-primary { background: var(--accent); color: #0a0a0f; border: none; }
   .btn-primary:hover { background: #a7f3d0; transform: translateY(-2px); }
   .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 2rem; }
+  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 2rem; flex-wrap: wrap; }
   .stat-num { font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--accent); }
   .stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; margin-top: 0.2rem; }
 
-  /* SECTIONS */
+  /* ── SECTIONS ── */
   section { padding: 6rem 3rem; max-width: 1200px; margin: 0 auto; }
   .section-label { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
   .section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
   h2 { font-family: var(--font-head); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 3rem; line-height: 1.05; }
 
-  /* ABOUT */
+  /* ── ABOUT ── */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .about-text { line-height: 1.85; color: var(--muted); font-size: 0.9rem; }
   .about-text p + p { margin-top: 1rem; }
@@ -100,13 +101,13 @@
   .detail-row .label { color: var(--muted); }
   .detail-row .value { color: var(--accent); }
 
-  /* SKILLS */
+  /* ── SKILLS ── */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
   .skill-chip { padding: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: 6px; text-align: center; font-size: 0.8rem; color: var(--text); transition: all 0.25s; cursor: default; }
   .skill-chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(110,231,183,0.1); }
   .skill-chip .skill-icon { font-size: 1.6rem; margin-bottom: 0.5rem; display: block; }
 
-  /* EXPERIENCE */
+  /* ── EXPERIENCE ── */
   .timeline { display: flex; flex-direction: column; }
   .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
   .timeline-item:first-child { padding-top: 0; }
@@ -116,7 +117,19 @@
   .timeline-content p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
   .badge { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(110,231,183,0.1); border: 1px solid rgba(110,231,183,0.3); border-radius: 3px; font-size: 0.65rem; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; }
 
-  /* PROJECTS */
+  /* ── CERTIFICATIONS ── */
+  .cert-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .cert-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; transition: all 0.25s; flex-wrap: wrap; }
+  .cert-card:hover { border-color: rgba(110,231,183,0.35); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+  .cert-left { display: flex; align-items: center; gap: 1.25rem; }
+  .cert-logo { width: 52px; height: 52px; border-radius: 10px; flex-shrink: 0; background: linear-gradient(135deg, #0056d2, #0073e6); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+  .cert-info h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem; }
+  .cert-info .cert-issuer { font-size: 0.78rem; color: var(--accent2); margin-bottom: 0.3rem; }
+  .cert-info .cert-meta { font-size: 0.72rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; }
+  .cert-verify { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.25rem; background: rgba(110,231,183,0.08); border: 1px solid rgba(110,231,183,0.3); border-radius: 4px; color: var(--accent); font-size: 0.75rem; font-family: var(--font-mono); text-decoration: none; letter-spacing: 0.05em; transition: all 0.2s; white-space: nowrap; }
+  .cert-verify:hover { background: rgba(110,231,183,0.18); border-color: var(--accent); transform: translateX(3px); }
+
+  /* ── PROJECTS ── */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem; transition: all 0.3s; position: relative; overflow: hidden; }
   .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
@@ -128,7 +141,7 @@
   .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
   .tech-tag { padding: 0.2rem 0.5rem; background: rgba(129,140,248,0.1); border: 1px solid rgba(129,140,248,0.2); border-radius: 3px; font-size: 0.65rem; color: var(--accent2); }
 
-  /* EDUCATION */
+  /* ── EDUCATION ── */
   .edu-grid { display: flex; flex-direction: column; gap: 1rem; }
   .edu-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; transition: border-color 0.2s; }
   .edu-card:hover { border-color: rgba(110,231,183,0.3); }
@@ -137,7 +150,7 @@
   .edu-card .cgpa { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--accent); text-align: right; }
   .edu-card .year { font-size: 0.7rem; color: var(--muted); text-align: right; }
 
-  /* CONTACT */
+  /* ── CONTACT ── */
   .contact-wrapper { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
   .contact-text h2 { margin-bottom: 1rem; }
   .contact-text p { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
@@ -146,22 +159,22 @@
   .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateX(4px); }
   .contact-link .icon { font-size: 1.2rem; }
 
-  /* FOOTER */
+  /* ── FOOTER ── */
   footer { border-top: 1px solid var(--border); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: var(--muted); }
 
-  /* ANIMATIONS */
+  /* ── ANIMATIONS ── */
   .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
-  .cursor { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 99998; transition: transform 0.1s, opacity 0.2s; mix-blend-mode: screen; }
+  .cursor { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 99998; transition: transform 0.1s; mix-blend-mode: screen; }
 
-  /* MOBILE */
+  /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links a { font-size: 0.65rem; }
     .hero { padding: 7rem 1.5rem 3rem; }
     .hero-inner { flex-direction: column-reverse; align-items: center; }
     .hero-photo-wrap { width: 180px; height: 180px; }
-    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .projects-grid { grid-template-columns: 1fr; }
@@ -170,6 +183,7 @@
     .edu-card .cgpa, .edu-card .year { text-align: left; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .cert-card { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -183,6 +197,8 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -193,7 +209,6 @@
 <div class="hero">
   <div class="hero-inner">
 
-    <!-- Text side -->
     <div class="hero-text">
       <p class="hero-tag">Computer Science Engineer</p>
       <h1>Fuzail<br/><span>Javed</span></h1>
@@ -206,8 +221,7 @@
       </div>
     </div>
 
-    <!-- Photo side -->
-    <!-- To show your photo: upload a file named "photo.jpg" to your GitHub repo -->
+    <!-- Upload a file named photo.jpg to your GitHub repo to show your photo here -->
     <div class="hero-photo-wrap">
       <div class="hero-photo-ring"></div>
       <div class="hero-photo-bg"></div>
@@ -287,9 +301,32 @@
       <div class="timeline-date">2025–now</div>
       <div class="timeline-content">
         <div class="badge">Graduate Student</div>
-        <h3>MS Computer Science & Technology</h3>
-        <div class="org">Jiangsu University of Science & Technology, China</div>
+        <h3>MS Computer Science &amp; Technology</h3>
+        <div class="org">Jiangsu University of Science &amp; Technology, China</div>
         <p>Currently pursuing a Master's degree, advancing expertise in computer science and emerging technologies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="background:var(--surface);max-width:100%;width:100%;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="fade-up"><p class="section-label">Credentials</p><h2>Certifications</h2></div>
+    <div class="cert-grid fade-up">
+      <div class="cert-card">
+        <div class="cert-left">
+          <div class="cert-logo">🐍</div>
+          <div class="cert-info">
+            <h3>Crash Course on Python</h3>
+            <div class="cert-issuer">Google &nbsp;·&nbsp; Coursera</div>
+            <div class="cert-meta">
+              <span>📅 2024</span>
+              <span>🏅 Verified Certificate</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.coursera.org/account/accomplishments/verify/458FX2NLG8SQ" target="_blank" class="cert-verify">✓ Verify Certificate</a>
       </div>
     </div>
   </div>
@@ -323,7 +360,7 @@
 
     <div class="project-card">
       <div class="project-type">👥 Group · AI / NLP</div>
-      <h3>Speech-to-Text & Knowledge Base</h3>
+      <h3>Speech-to-Text &amp; Knowledge Base</h3>
       <p>Built a speech recognition system with domain-specific knowledge extraction focused on the cricket domain, combining NLP and audio processing.</p>
       <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">Speech API</span></div>
     </div>
@@ -337,7 +374,7 @@
 
     <div class="project-card">
       <div class="project-type">👥 Group · Security</div>
-      <h3>Android Exploitation & Security Analysis</h3>
+      <h3>Android Exploitation &amp; Security Analysis</h3>
       <p>Explored Android system vulnerabilities, performing security analysis using exploit techniques to understand attack surfaces and defensive strategies.</p>
       <div class="project-tech"><span class="tech-tag">Android</span><span class="tech-tag">Security</span><span class="tech-tag">Metasploit</span></div>
     </div>
@@ -366,12 +403,12 @@
     <div class="edu-grid fade-up">
 
       <div class="edu-card">
-        <div><h3>Jiangsu University of Science & Technology</h3><div class="degree">MS Computer Science & Technology · China</div></div>
+        <div><h3>Jiangsu University of Science &amp; Technology</h3><div class="degree">MS Computer Science &amp; Technology · China</div></div>
         <div><div class="cgpa">MS</div><div class="year">2025 – Present</div></div>
       </div>
 
       <div class="edu-card">
-        <div><h3>Capital University of Science & Technology</h3><div class="degree">BS Computer Science · Islamabad</div></div>
+        <div><h3>Capital University of Science &amp; Technology</h3><div class="degree">BS Computer Science · Islamabad</div></div>
         <div><div class="cgpa">3.91</div><div class="year">2021 – 2025</div></div>
       </div>
 
@@ -381,7 +418,7 @@
       </div>
 
       <div class="edu-card">
-        <div><h3>Rawal Cadet College & School</h3><div class="degree">Matriculation</div></div>
+        <div><h3>Rawal Cadet College &amp; School</h3><div class="degree">Matriculation</div></div>
         <div><div class="cgpa">750</div><div class="year">2016 – 2018</div></div>
       </div>
 
@@ -409,7 +446,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Fuzail Javed. All rights reserved.</span>
+  <span>© 2025 Fuzail Javed. All rights reserved.</span>
   <span>Built with ❤️ · Hosted on GitHub Pages</span>
 </footer>
 
@@ -420,7 +457,7 @@
     cursor.style.top  = e.clientY - 4 + 'px';
   });
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
